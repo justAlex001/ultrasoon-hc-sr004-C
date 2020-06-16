@@ -38,7 +38,7 @@ void init_inputcapture(void)
 //volatile ints van de input omdat de waardes van buiten kommen MOETEN VOLATILE ZIJN !
 volatile uint8_t  newCapture = 0;
 volatile uint16_t period;
-//volatile uint16_t lengte;
+
 
 
 int main(void)
@@ -61,7 +61,7 @@ int main(void)
 // zal de input printen 
 	while (1) {
 		while (! newCapture) ;
-	//	lengte = 1 / period  ;
+	
 		printf("%u\n", period);
 		newCapture = 0;                      // clear newCapture flag
 	}
